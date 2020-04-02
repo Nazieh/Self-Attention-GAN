@@ -174,7 +174,7 @@ class Trainer(object):
                       " ave_gamma_l3: {:.4f}, ave_gamma_l4: {:.4f}".
                       format(elapsed, step + 1, self.total_step, (step + 1),
                              self.total_step , d_loss_real.data.item,
-                             self.G.attn1.gamma.mean().data.item, self.G.attn2.gamma.mean().data.item ))
+                             self.G.attn1.gamma.mean().data, self.G.attn2.gamma.mean().data ))
 
             # Sample images
             if (step + 1) % self.sample_step == 0:
